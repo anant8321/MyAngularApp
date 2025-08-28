@@ -1,0 +1,22 @@
+<p>rooms works!</p>
+
+<h2>Welcome to {{hotelName}}</h2>   
+
+<div [hidden]="hideRooms">
+    <p>No. of rooms available are :</p>
+    <div [innerText]="number_of_hotels"></div>
+</div>
+
+<button (click)="toggle()">On/Off</button>
+
+{{rooms_var ?.availableRooms?? 0}}
+
+<div *ngIf="(rooms_var?.availableRooms ?? -2) > 0">
+    <h2>Inside ngIf</h2>
+</div>
+
+@if ((rooms_var?.availableRooms ?? -2) > 0) {
+  <div><h2>Inside if</h2></div>
+}
+
+
